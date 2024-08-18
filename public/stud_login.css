@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    z-index: -2;
+    background: rgb(20, 39, 78);
+}
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Ensure it's behind other content */
+}
+
+#loginCard {
+    height: 60%;
+    width: 20%;
+    padding: 48px 68px;
+    background: beige;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 4px;
+}
+
+h1 {
+    position: absolute; /* Use absolute positioning */
+    top: 50%; /* Move down 50% of the container's height */
+    left: 50%; /* Move right 50% of the container's width */
+    transform: translate(-50%, -300%); /* Adjust position to center */
+    margin: 10;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+.inputField {
+    width: 100%;
+    padding: 15px;
+    color: #ffffff;
+    background: rgba(22, 22, 22, 0.7);
+    border-radius: 0.25rem;
+    border-width: 0.0625rem;
+    border-color: rgba(128, 128, 128, 0.7);
+    box-sizing: border-box;
+}
+
+#username {
+    position: absolute; /* Use absolute positioning */
+    top: 50%; /* Move down 50% of the container's height */
+    left: 50%; /* Move right 50% of the container's width */
+    transform: translate(-50%, -100%); /* Adjust position to center */
+    width: 20%; /* Full width */
+    padding: 10px; /* Padding for the button */
+}
+
+#password {
+    position: absolute; /* Use absolute positioning */
+    top: 50%; /* Move down 50% of the container's height */
+    left: 50%; /* Move right 50% of the container's width */
+    transform: translate(-50%, 50%); /* Adjust position to center */
+    width: 20%; /* Full width */
+    padding: 10px; /* Padding for the button */
+}
+
+button {
+    position: absolute; /* Use absolute positioning */
+    top: 50%; /* Move down 50% of the container's height */
+    left: 50%; /* Move right 50% of the container's width */
+    transform: translate(-50%, 200%); /* Adjust position to center */
+    width: 20%; /* Full width */
+    padding: 10px; /* Padding for the button */
+}
