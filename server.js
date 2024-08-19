@@ -36,12 +36,47 @@ app.use(session({
 // Serve static files from the 'public' directory
 app.use(express.static('public'));
 
-// Authentication endpoint
-app.post('/api/login', (req, res) => {
+// Authentication endpoint for students
+app.post('/api/studlogin', (req, res) => {
     const { username, password } = req.body;
 
     // Query to fetch user data from the database
     const sql = 'SELECT * FROM users WHERE username = ?';
+    connection.query(sql, [username], (error, results) => {
+        if (error) {
+            console.error('Error querying user:', error);
+            return res.status(500).json({ error: 'Database query error' });
+        }
+
+        if (results.length === 0) {
+            return res.status(401).json({ error: 'Invalid username or password' });
+        }
+
+        const user = results[0];
+
+        // Compare password
+        bcrypt.compare(password, user.hashed_password, (err, match) => {
+            if (err) {
+                console.error('Error comparing passwords:', err);
+                return res.status(500).json({ error: 'Internal error' });
+            }
+
+            if (match) {
+                req.session.user = user.username;
+                res.status(200).json({ message: 'Login successful' });
+            } else {
+                res.status(401).json({ error: 'Invalid username or password' });
+            }
+        });
+    });
+});
+
+// Authentication endpoint for teachers
+app.post('/api/teachlogin', (req, res) => {
+    const { username, password } = req.body;
+
+    // Query to fetch user data from the database
+    const sql = 'SELECT * FROM admin WHERE username = ?';
     connection.query(sql, [username], (error, results) => {
         if (error) {
             console.error('Error querying user:', error);
