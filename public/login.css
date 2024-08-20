@@ -73,5 +73,8 @@ button {
     left: 50%; /* Move right 50% of the container's width */
     transform: translate(-50%, 200%); /* Adjust position to center */
     width: 20%; /* Full width */
-    padding: 10px; /* Padding for the button */
+    padding: 10px 20px; /* Padding for the button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
