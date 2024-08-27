@@ -1,0 +1,65 @@
+body {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background: rgb(20, 39, 78);
+    margin: 0;
+    z-index: -2;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Ensure it's behind other content */
+}
+
+#loginCard {
+    padding: 4vmax 5vmax;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center align items horizontally */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+h1 {
+    margin: 0;
+    margin-bottom: 3vmax;
+    font-size: 3vmax;
+    color: #ffffff;
+}
+
+.inputField {
+    width: 100%;
+    padding: 1vmax;
+    color: #ffffff;
+    background: rgba(22, 22, 22, 0.7);
+    border-radius: 0.25rem;
+    border-width: 0.0625rem;
+    border-color: rgba(128, 128, 128, 0.7);
+    box-sizing: border-box;
+    margin-bottom: 1.5vmax; /* Space between fields and button */
+}
+
+button {
+    width: 100%;
+    padding: 0.5vmax;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    margin-top: 1.5vmax; /* Space above the button */
+    margin-bottom: 3vmax;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

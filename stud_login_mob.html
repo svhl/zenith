@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Login</title>
+    <head>
+        <link rel="stylesheet" href="stud_login_mob.css" />
+    </head>
+    <body>
+        <div>
+            <img src="zenith.png" alt="Zenith Logo" id="logo" />
+            <h1 id="grpName">Zenith</h1>
+        </div>
+        <h1 id="title">Student Login</h1>
+        <input type="text" class="inputField" value="" placeholder="Username" />
+        <input
+            type="text"
+            class="inputField"
+            id="password"
+            value=""
+            placeholder="Password"
+        />
+        <button>Sign In</button>
+        <script>
+            // Function to clear all text fields with the class 'inputField'
+            function clearTextFields() {
+                // Select all text fields with the class 'inputField'
+                var textFields = document.querySelectorAll(".inputField");
+                textFields.forEach(function (field) {
+                    // Check if the element is an input field and of type 'text'
+                    if (field.type === "text") {
+                        field.value = "";
+                    }
+                });
+            }
+
+            // Call the function when the window loads
+            window.onload = clearTextFields;
+        </script>
+    </body>
+</html>

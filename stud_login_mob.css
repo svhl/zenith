@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    height: 100vh;
+    color: white;
+    background: rgb(20, 39, 78);
+}
+div {
+    display: flex;
+    align-items: center;
+    background: #333;
+    box-shadow: 0 4px 2px -2px gray;
+}
+#logo {
+    width: 10vmax;
+}
+#grpName {
+    margin: 0;
+}
+#title {
+    margin-left: 6vmin;
+}
+.inputField {
+    padding: 2vmax;
+    color: #ffffff;
+    background: rgba(22, 22, 22, 0.7);
+    border-radius: 0.25rem;
+    border-width: 0.0625rem;
+    border-color: rgba(128, 128, 128, 0.7);
+    box-sizing: border-box;
+    margin-bottom: 3vmax; /* Space between fields and button */
+    margin-left: 5vmin;
+    margin-right: 5vmin;
+    width: calc(100% - 10vmin);
+}
+button {
+    padding: 1vmax;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    margin-top: 3vmax;
+    margin-left: 6vmin;
+    margin-right: 6vmin;
+    box-sizing: border-box;
+    width: calc(100% - 13vmin);
+}
